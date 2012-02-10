@@ -8,6 +8,10 @@ var fnExistsSync = fs.existsSync || path.existsSync;
 function createInodeChecker() {
     var inodes = {};
     return function inodeSeen(inode) {
+        if (inode == 0) {
+            return false;
+        }
+
         if (inodes[inode]) {
             return true;
         } else {
