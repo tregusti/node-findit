@@ -109,7 +109,7 @@ function find (base, options, cb) {
     return em;
 };
 
-exports.findSync = function findSync(dir, options, callback) {
+exports.findSync = function findSync(dir, options, cb) {
     cb = arguments[arguments.length - 1];
     if (typeof(cb) !== 'function') {
         cb = undefined;
